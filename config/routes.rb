@@ -1,4 +1,6 @@
 Statscrij::Application.routes.draw do
+  resources :usagers
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

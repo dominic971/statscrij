@@ -1,0 +1,61 @@
+<%= form_for(@usager) do |f| %>
+  <% if @usager.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@usager.errors.count, "error") %> prohibited this usager from being saved:</h2>
+
+      <ul>
+      <% @usager.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :sexe %><br />
+    <%= f.radio_button :sexe , :male %> Masculin 
+	<%= f.radio_button :sexe , :femele %> Féminin
+  </div>
+  <div class="field">
+    <%= f.label :tranche_age %><br />
+	<%= f.radio_button :tranche_age , :mdequinze%> Moins de 15 ans 
+	<%= f.radio_button :tranche_age , :quinzeavingt %> De 15 à 20 ans 
+	<%= f.radio_button :tranche_age , :vunavhuit %> De 21 à 28 ans
+	<%= f.radio_button :tranche_age , :moinsdequinze%> Plus de 28 ans 
+  </div>
+  <div class="field">
+    <%= f.label :niv_formation %><br />
+    <%= f.radio_button :niv_formation , :six %> 6
+	<%= f.radio_button :niv_formation , :cinq %> 5 
+	<%= f.radio_button :niv_formation , :quatre %> 4<br /> 
+	<%= f.radio_button :niv_formation , :trois %> 3
+	<%= f.radio_button :niv_formation , :deux %> 2
+	<%= f.radio_button :niv_formation , :un %> 1
+  </div>
+  <div class="field">
+    <%= f.label :situation %><br />
+    <%= f.radio_button :situation , :college %> Collège
+	<%= f.radio_button :situation , :lyceen %> Lycéen 
+	<%= f.radio_button :situation , :etudiant %> Etudiant
+	<%= f.radio_button :situation , :stagforpro %> Stagiaire formation professionnelle<br />
+	<%= f.radio_button :situation , :dem_emploi %> Demandeur d'emploi
+	<%= f.radio_button :situation , :salarie %> Salarié
+	<%= f.radio_button :situation , :sansa_activite %> Sans activité
+	<%= f.radio_button :situation , :ben_rsa %> Bénéficiaire RSA
+  </div>
+  <div class="field">
+    <%= f.label :ville %><br />
+    <%= f.text_field :ville %>
+  </div>
+  <div class="field">
+    <%= f.label :domaine %><br />
+    <%= f.text_field :domaine %>
+  </div>
+  <div class="field">
+    <%= f.label :service %><br />
+    <%= f.text_field :service %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

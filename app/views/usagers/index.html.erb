@@ -1,0 +1,35 @@
+<h1>Listing usagers</h1>
+
+<table>
+  <tr>
+    <th>Sexe</th>
+    <th>Tranche age</th>
+    <th>Niv formation</th>
+    <th>Situation</th>
+    <th>Ville</th>
+    <th>Domaine</th>
+    <th>Service</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @usagers.each do |usager| %>
+  <tr>
+    <td><%= usager.sexe %></td>
+    <td><%= usager.tranche_age %></td>
+    <td><%= usager.niv_formation %></td>
+    <td><%= usager.situation %></td>
+    <td><%= usager.ville %></td>
+    <td><%= usager.domaine %></td>
+    <td><%= usager.service %></td>
+    <td><%= link_to 'Show', usager %></td>
+    <td><%= link_to 'Edit', edit_usager_path(usager) %></td>
+    <td><%= link_to 'Destroy', usager, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Usager', new_usager_path %>

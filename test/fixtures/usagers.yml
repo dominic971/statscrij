@@ -1,0 +1,19 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  sexe: MyString
+  tranche_age: MyString
+  niv_formation: MyString
+  situation: MyString
+  ville: MyString
+  domaine: MyString
+  service: MyString
+
+two:
+  sexe: MyString
+  tranche_age: MyString
+  niv_formation: MyString
+  situation: MyString
+  ville: MyString
+  domaine: MyString
+  service: MyString

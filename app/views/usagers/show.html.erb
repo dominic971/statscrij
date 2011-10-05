@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Sexe:</b>
+  <%= @usager.sexe %>
+</p>
+
+<p>
+  <b>Tranche age:</b>
+  <%= @usager.tranche_age %>
+</p>
+
+<p>
+  <b>Niv formation:</b>
+  <%= @usager.niv_formation %>
+</p>
+
+<p>
+  <b>Situation:</b>
+  <%= @usager.situation %>
+</p>
+
+<p>
+  <b>Ville:</b>
+  <%= @usager.ville %>
+</p>
+
+<p>
+  <b>Domaine:</b>
+  <%= @usager.domaine %>
+</p>
+
+<p>
+  <b>Service:</b>
+  <%= @usager.service %>
+</p>
+
+
+<%= link_to 'Edit', edit_usager_path(@usager) %> |
+<%= link_to 'Back', usagers_path %>
