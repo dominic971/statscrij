@@ -3,6 +3,7 @@ class UsagersController < ApplicationController
   # GET /usagers.xml
   def index
     @usagers = Usager.all
+    @usager_total = Usager.count
 
     respond_to do |format|
       format.html # index.html.erb
@@ -25,6 +26,7 @@ class UsagersController < ApplicationController
   # GET /usagers/new.xml
   def new
     @usager = Usager.new
+    @villes = Ville.all
 
     respond_to do |format|
       format.html # new.html.erb
@@ -57,6 +59,7 @@ class UsagersController < ApplicationController
   # PUT /usagers/1.xml
   def update
     @usager = Usager.find(params[:id])
+    @villes = Ville.all
 
     respond_to do |format|
       if @usager.update_attributes(params[:usager])

@@ -37,16 +37,18 @@
     <%= f.radio_button :situation , :college %> Collège
 	<%= f.radio_button :situation , :lyceen %> Lycéen 
 	<%= f.radio_button :situation , :etudiant %> Etudiant
-	<%= f.radio_button :situation , :stagforpro %> Stagiaire formation professionnelle<br />
+	<%= f.radio_button :situation , :stagforpro %> Stagiaire formation professionnelle<br /> 
 	<%= f.radio_button :situation , :dem_emploi %> Demandeur d'emploi
 	<%= f.radio_button :situation , :salarie %> Salarié
 	<%= f.radio_button :situation , :sansa_activite %> Sans activité
 	<%= f.radio_button :situation , :ben_rsa %> Bénéficiaire RSA
   </div>
   <div class="field">
-    <%= f.label :ville %><br />
-    <%= f.text_field :ville %>
-  </div>
+   <%= f.label :ville %><br />
+   <%= f.select(:ville_id, Ville.all.collect {|c| [ c.nom, c.id ] }) %> 
+  
+ 
+   </div>
   <div class="field">
     <%= f.label :domaine %><br />
     <%= f.text_field :domaine %>

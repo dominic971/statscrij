@@ -1,4 +1,6 @@
 Statscrij::Application.routes.draw do
+  resources :villes
+
   resources :usagers
 
   # The priority is based upon order of creation:

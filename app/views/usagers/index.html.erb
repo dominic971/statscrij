@@ -1,4 +1,14 @@
-<h1>Listing usagers</h1>
+<h1>Récapitulatif</h1>
+
+<table>
+<tr>
+<th>Total</th>
+<th>Moy/mois</th>
+<th>Moy/jours</th>
+</tr>
+<tr>
+<td><%= @usager_total %><td>
+</table>
 
 <table>
   <tr>
@@ -20,7 +30,7 @@
     <td><%= usager.tranche_age %></td>
     <td><%= usager.niv_formation %></td>
     <td><%= usager.situation %></td>
-    <td><%= usager.ville %></td>
+    <td><%= usager.ville_id %></td>
     <td><%= usager.domaine %></td>
     <td><%= usager.service %></td>
     <td><%= link_to 'Show', usager %></td>
