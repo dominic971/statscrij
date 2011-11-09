@@ -1,0 +1,10 @@
+<header>
+        <%= image_tag("Logo_IJ22.gif", :alt => "logo crijgua", :class => "round") %>
+        <nav class="round">
+          <ul>
+            <li><%= link_to "Accueil", new_path %></li>
+            <li><%= link_to "Statistiques", new_path %></li>
+            <li><%= link_to "Résultats", index_path %></li>
+          </ul>
+        </nav>
+	</header>

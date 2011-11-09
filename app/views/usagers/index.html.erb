@@ -1,15 +1,38 @@
 <h1>Récapitulatif</h1>
-
+<h3>Nous sommes le <%= @date %></h3>
 <table>
 <tr>
 <th>Total</th>
-<th>Moy/mois</th>
 <th>Moy/jours</th>
+<th>jour max usagers</th>
+<th>jour min usagers</th>
 </tr>
+
+
 <tr>
-<td><%= @usager_total %><td>
+<td><%= @usager_total %></td>
+<td> <%= @moy_usagers %></td>
+<td><%= @Jourmaxusager %></td>
+<td><%= @Jourminusager %></td>
 </table>
 
+<table>
+<tr>
+<th>Nombre de femmes</th>
+<th>Pourcentage femme</th>
+<th>Nombre d'hommes</th>
+<th>Pourcentage d'hommes</th>
+
+</tr>
+
+
+<tr>
+<td><%= @Nbre_femme %></td>
+<td> <%= @pourcentage_femme%></td>
+<td><%= @Nbre_homme %></td>
+<td> <%= @pourcentage_homme%></td>
+
+</table>
 <table>
   <tr>
     <th>Sexe</th>

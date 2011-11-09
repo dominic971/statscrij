@@ -1,8 +1,15 @@
 Statscrij::Application.routes.draw do
+
+  root :to => "Usagers#index"
+  
   resources :villes
 
   resources :usagers
-
+  
+  match '/new', :to => 'usagers#new'
+  match '/resultats',   :to => 'usagers#resultats'
+  
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

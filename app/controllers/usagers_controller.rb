@@ -4,6 +4,23 @@ class UsagersController < ApplicationController
   def index
     @usagers = Usager.all
     @usager_total = Usager.count
+    @datetime = Time.now
+	@datetime1 = @datetime.to_s(:rfc822)
+	@nbre_usagers = Usager.count
+	@moy_usagers = @nbre_usagers.to_f/20
+	@date = Date.today
+	
+	@Jourmaxusager = Usager.maximum(:created_at)
+	@Jourminusager = Usager.minimum(:created_at)
+	@mois_en_cours = @date.month
+	
+	@Nbre_femme =  Usager.count(:conditions=>'sexe="femele"')
+	@Nbre_homme =  Usager.count(:conditions=>'sexe="male"')
+	@pourcentage_femme1 = (@Nbre_femme.to_f/@usager_total.to_f)*100
+	@pourcentage_femme = @pourcentage_femme1.round(2).to_s + " %"
+	@pourcentage_homme1 = (@Nbre_homme.to_f/@usager_total.to_f)*100
+	@pourcentage_homme = @pourcentage_homme1.round(2).to_s + " %"
+	
 
     respond_to do |format|
       format.html # index.html.erb
