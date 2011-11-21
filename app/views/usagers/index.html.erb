@@ -1,5 +1,5 @@
 <h1>Récapitulatif</h1>
-<h3>Nous sommes le <%= @date %></h3>
+<h3>Nous sommes le <%= @datetime1 %></h3>
 <table>
 <tr>
 <th>Total</th>
@@ -14,6 +14,7 @@
 <td> <%= @moy_usagers %></td>
 <td><%= @Jourmaxusager %></td>
 <td><%= @Jourminusager %></td>
+</tr>
 </table>
 
 <table>
@@ -22,7 +23,6 @@
 <th>Pourcentage femme</th>
 <th>Nombre d'hommes</th>
 <th>Pourcentage d'hommes</th>
-
 </tr>
 
 
@@ -31,8 +31,136 @@
 <td> <%= @pourcentage_femme%></td>
 <td><%= @Nbre_homme %></td>
 <td> <%= @pourcentage_homme%></td>
+</tr>
+</table>
+
+<table>
+<tr>
+<th>Moins de 15 ans</th>
+<th>De 15 à 20 ans</th>
+<th>De 21 à 28 ans</th>
+<th>Plus de 28 ans</th>
+</tr>
+
+
+<tr>
+<td><%= @nbre_moinsde15ans %></td>
+<td> <%= @nbre_de15a20ans %></td>
+<td><%= @nbre_de21a28ans %></td>
+<td><%= @nbre_plusde28ans %></td>
+</tr>
+
+<tr>
+<td><%= @p_moinsde15ans %></td>
+<td> <%= @p_de15a20ans %></td>
+<td><%= @p_de21a28ans %></td>
+<td><%= @p_plusde28ans %></td>
+</tr>
+</table>
+
+<table>
+<tr>
+<th>Collégien</th>
+<th>Lycéens</th>
+<th>Etudiant</th>
+<th>Stagiaire form° prof.</th>
+<th>Dem Emploi </th>
+<th>Salarié</th>
+<th>Bénéficiaire du RSA</th>
+<th>Sans activité</th>
+</tr>
+
+
+<tr>
+<td> <%= @Nbre_Collegien %> </td>
+<td> <%= @Nbre_Lyceens %> </td>
+<td> <%= @Nbre_Etudiant %> </td>
+<td> <%= @Nbre_Stagiaire_form_prof %> </td>
+<td> <%= @Nbre_Dem_Emploi %> </td>
+<td> <%= @Nbre_Salarie %> </td>
+<td> <%= @Nbre_Beneficiaire_RSA %> </td>
+<td> <%= @Nbre_Sans_activite %> </td>
+</tr>
+
+<tr>
+<td> <%= @p_Collegien %> </td>
+<td> <%= @p_Lyceens %> </td>
+<td> <%= @p_Etudiant %> </td>
+<td> <%= @p_Stagiaire_form_prof %> </td>
+<td> <%= @p_Dem_Emploi %> </td>
+<td> <%= @p_Salarie %> </td>
+<td> <%= @p_Beneficiaire_RSA %> </td>
+<td> <%= @p_Sans_activite %> </td>
+</tr>
 
 </table>
+
+<table>
+<tr>
+<th>Enseignement</th>
+<th>Metiers</th>
+<th>Emplois</th>
+<th>Formation</th>
+<th>Vie pratique </th>
+<th>Loisirs</th>
+<th>Mobilite</th>
+</tr>
+
+
+<tr>
+<td> <%= @Nbre_enseignement %> </td>
+<td> <%= @Nbre_metiers %> </td>
+<td> <%= @Nbre_emplois %> </td>
+<td> <%= @Nbre_formation %> </td>
+<td> <%= @Nbre_vie_pratique %> </td>
+<td> <%= @Nbre_loisirs %> </td>
+<td> <%= @Nbre_mobilite %> </td>
+</tr>
+
+<tr>
+<td> <%= @p_enseignement %> </td>
+<td> <%= @p_metiers %> </td>
+<td> <%= @p_emplois %> </td>
+<td> <%= @p_formation %> </td>
+<td> <%= @p_vie_pratique %> </td>
+<td> <%= @p_loisirs %> </td>
+<td> <%= @p_mobilite %> </td>
+</tr>
+</table>
+
+<table>
+<tr>
+<th>Service Insertion</th>
+<th>Service Logement</th>
+<th>Service Mobilité</th>
+<th>Annonces: concours, jobs</th>
+<th>Service Bureautique </th>
+<th>Espace Multimédia</th>
+<th>CV, lettre de motivation, aide aux projets</th>
+</tr>
+
+
+<tr>
+<td> <%= @Nbre_insertion %> </td>
+<td> <%= @Nbre_logement %> </td>
+<td> <%= @Nbre_mobilite %> </td>
+<td> <%= @Nbre_annonce %> </td>
+<td> <%= @Nbre_bureautique %> </td>
+<td> <%= @Nbre_multimedia %> </td>
+<td> <%= @Nbre_cvlm %> </td>
+</tr>
+
+<tr>
+<td> <%= @p_insertion %> </td>
+<td> <%= @p_logement %> </td>
+<td> <%= @p_mobilite %> </td>
+<td> <%= @p_annonce %> </td>
+<td> <%= @p_bureautique %> </td>
+<td> <%= @p_multimedia %> </td>
+<td> <%= @p_cvlm  %> </td>
+</tr>
+</table>
+
 <table>
   <tr>
     <th>Sexe</th>
